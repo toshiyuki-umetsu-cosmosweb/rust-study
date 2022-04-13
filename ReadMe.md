@@ -27,6 +27,7 @@ rustc -o ${output} ${source-file}
 cargo new ${package-name}
 ~~~
 package-nameはパッケージ名の制約がある。数字で開始できない。
+cargo new で生成したフォルダには.gitと.gitignoreが予め生成されている。git add で追加しようとすると"does not have a commit checked out"メッセージが出て追加できない。
 
 
 ### プロジェクトをビルドする
