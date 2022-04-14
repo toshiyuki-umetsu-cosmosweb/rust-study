@@ -27,7 +27,8 @@ rustc -o ${output} ${source-file}
 cargo new ${package-name}
 ~~~
 package-nameはパッケージ名の制約がある。数字で開始できない。
-cargo new で生成したフォルダには.gitと.gitignoreが予め生成されている。git add で追加しようとすると"does not have a commit checked out"メッセージが出て追加できない。
+cargo new で生成したフォルダには.gitと.gitignoreが予め生成されている。git add で追加しようとすると"does not have a commit checked out"メッセージが出て追加できない。.gitignore, .gitを生成したくない場合、cargo new のオプションで--vcs noneを付けて実行する。
+
 
 
 ### プロジェクトをビルドする
@@ -48,7 +49,17 @@ cargo run
 cargo clean
 ~~~
 
+### ドキュメントを生成する。
 
+~~~
+cargo doc
+~~~
+
+### 生成したドキュメントを表示する。
+
+~~~
+cargo doc open
+~~~
    
 
 
@@ -60,3 +71,5 @@ https://doc.rust-lang.org/book/
 Rust 入門
 https://zenn.dev/mebiusbox/books/22d4c1ed9b0003
 
+Qiita Rustのドキュメンテーションコメントについて学ぶ
+https://qiita.com/simonritchie/items/87d3743e138763ff3e85
