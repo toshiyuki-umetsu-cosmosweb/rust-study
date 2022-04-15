@@ -62,6 +62,18 @@ cargo doc open
 ~~~
    
 
+### デバッグ
+
+~~~
+rust-lldb {ouput-binary}
+~~~
+
+基本的なコマンド
+
+* p {symbol} - 変数の値を表示。
+* b {symbol} - ブレークポイントを設定する。
+* n - 次の行実行
+* c - 継続(終了するか次のbreakまで実行）
 
 # 参考にしたURL
 
@@ -70,6 +82,9 @@ https://doc.rust-lang.org/book/
 
 Rust 入門
 https://zenn.dev/mebiusbox/books/22d4c1ed9b0003
+
+Rust by Example 日本語版
+https://doc.rust-jp.rs/rust-by-example-ja/index.html
 
 Qiita Rustのドキュメンテーションコメントについて学ぶ
 https://qiita.com/simonritchie/items/87d3743e138763ff3e85
