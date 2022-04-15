@@ -24,10 +24,18 @@ rustc -o ${output} ${source-file}
 ### プロジェクトテンプレートを作る
 
 ~~~
-cargo new ${package-name}
+cargo new ${directory-name}
 ~~~
-package-nameはパッケージ名の制約がある。数字で開始できない。
-cargo new で生成したフォルダには.gitと.gitignoreが予め生成されている。git add で追加しようとすると"does not have a commit checked out"メッセージが出て追加できない。.gitignore, .gitを生成したくない場合、cargo new のオプションで--vcs noneを付けて実行する。
+オプションなしだと、directory-nameはパッケージ名の制約がある。例えば数字で開始できない。
+パッケージ名を明示的に指定するならば、 * -name {package-name} * を指定する
+cargo new で生成したフォルダには.gitと.gitignoreが予め生成されている。
+git add で追加しようとすると"does not have a commit checked out"メッセージが出て追加できない。
+.gitignore, .gitを生成したくない場合、cargo new のオプションで--vcs noneを付けて実行する。
+つまり、
+~~~
+cargo new --name ${package-name} --vcs none ${directory-name}
+~~~
+とする。
 
 
 
